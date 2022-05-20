@@ -8,6 +8,12 @@ emailRegex = re.compile(r'''(
 
 # store matched addresses in an array called "matches"
 matches = []
+text = """
+An example text containing an email address, such as user@example.com or something like hello@example.com
+"""
+
 # search the text and append matched addresses to the "matches" array
 for groups in emailRegex.findall(text):
     matches.append(groups[0])
+
+# matches => ['user@example.com', 'hello@example.com']
